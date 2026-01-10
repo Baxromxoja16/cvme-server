@@ -11,6 +11,9 @@ export class Profile {
   @Prop()
   avatar: string;
 
+  @Prop({ default: true })
+  avatarActive: boolean;
+
   @Prop()
   about: string;
 }
