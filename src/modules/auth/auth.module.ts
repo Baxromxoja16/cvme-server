@@ -25,4 +25,4 @@ import { UsersModule } from '../users/users.module';
   controllers: [AuthController],
   providers: [AuthService, GoogleStrategy, JwtStrategy],
 })
-export class AuthModule { }
+export class AuthModule {}
