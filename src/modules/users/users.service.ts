@@ -20,11 +20,23 @@ export class UsersService {
     return this.userModel.findOne({ email }).exec();
   }
 
-  async findBySlug(slug: string): Promise<User | undefined> {
+  async findBySlug(slug: string): Promise<UserDocument | undefined> {
     return this.userModel.findOne({ slug }).exec();
   }
 
-  async findById(id: string): Promise<User | undefined> {
+  async isSlugAvailable(
+    slug: string,
+    excludeUserId?: string,
+  ): Promise<boolean> {
+    const query: any = { slug };
+    if (excludeUserId) {
+      query._id = { $ne: excludeUserId };
+    }
+    const existing = await this.userModel.findOne(query).exec();
+    return !existing;
+  }
+
+  async findById(id: string): Promise<UserDocument | undefined> {
     return this.userModel.findById(id).exec();
   }
 

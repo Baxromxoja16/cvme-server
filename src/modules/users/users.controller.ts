@@ -40,4 +40,10 @@ export class UsersController {
       contacts: user.contacts,
     };
   }
+
+  @Get('check-slug/:slug')
+  async checkSlugAvailability(@Param('slug') slug: string) {
+    const isAvailable = await this.usersService.isSlugAvailable(slug);
+    return { available: isAvailable };
+  }
 }
