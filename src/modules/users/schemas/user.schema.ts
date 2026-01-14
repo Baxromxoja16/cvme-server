@@ -77,6 +77,9 @@ export class User {
   @Prop([String])
   skills: string[];
 
+  @Prop({ default: 'minimalist' })
+  templateId: string;
+
   @Prop([Education])
   education: Education[];
 }

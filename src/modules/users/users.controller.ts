@@ -20,6 +20,7 @@ export class UsersController {
       skills: tenant.skills,
       education: tenant.education,
       contacts: tenant.contacts,
+      templateId: tenant.templateId,
       // Do not return email/googleId/dates unless necessary
     };
   }
@@ -38,6 +39,7 @@ export class UsersController {
       skills: user.skills,
       education: user.education,
       contacts: user.contacts,
+      templateId: user.templateId,
     };
   }
 
