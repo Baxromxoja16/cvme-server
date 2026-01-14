@@ -16,6 +16,9 @@ export class Profile {
 
   @Prop()
   about: string;
+
+  @Prop()
+  cvUrl?: string;
 }
 
 @Schema()
