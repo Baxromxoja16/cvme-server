@@ -51,6 +51,24 @@ export class Education {
   year: string;
 }
 
+@Schema()
+export class Project {
+  @Prop({ required: true })
+  title: string;
+
+  @Prop({ required: true })
+  description: string;
+
+  @Prop()
+  startDate: Date;
+
+  @Prop()
+  endDate: Date;
+
+  @Prop()
+  link: string;
+}
+
 @Schema({ timestamps: true })
 export class User {
   @Prop({ required: true, unique: true })
@@ -85,6 +103,9 @@ export class User {
 
   @Prop([Education])
   education: Education[];
+
+  @Prop([Project])
+  projects: Project[];
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
