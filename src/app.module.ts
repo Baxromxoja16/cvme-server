@@ -12,6 +12,7 @@ import { ContactsModule } from './modules/contacts/contacts.module';
 import { EducationModule } from './modules/education/education.module';
 import { ExperienceModule } from './modules/experience/experience.module';
 import { ProfileModule } from './modules/profile/profile.module';
+import { ProjectsModule } from './modules/projects/projects.module';
 import { SkillsModule } from './modules/skills/skills.module';
 import { UsersModule } from './modules/users/users.module';
 
@@ -29,6 +30,7 @@ import { UsersModule } from './modules/users/users.module';
     AuthModule,
     ProfileModule,
     SkillsModule,
+    ProjectsModule,
     ContactsModule,
     ExperienceModule,
     EducationModule,
